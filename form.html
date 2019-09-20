@@ -1,0 +1,390 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Registration Form</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<!--    <link href="styling.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="form.css">
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">  
+	
+
+     
+       
+              <!--	Validating form with the help of JavaScript-->
+  <script>
+        function validateForm()							 
+        {
+            var name = document.forms["RegForm"]["Name"];
+            var number = document.forms["RegForm"]["Number"];
+            var email = document.forms["RegForm"]["EMail"]; 
+            var branch = document.forms["RegForm"]["Branch"]; 
+            var phone = document.forms["RegForm"]["Telephone"]; 
+            var amount = document.forms["RegForm"]["Amount"];  
+            var password = document.forms["RegForm"]["Password"]; 
+            var hobby = document.forms["RegForm"]["comments"];
+            var file = document.forms["RegForm"]["File"];
+            var checked = document.forms["RegForm"]["Checks"];
+            var address = document.forms["RegForm"]["Address"]; 
+            
+
+
+            if (name.value == "")								 
+            {
+                window.alert("Please enter your name.");
+                name.focus();
+                return false;
+            }
+            
+            
+            
+            if (number.value == "")								 
+            {
+                window.alert("Please enter your Q/ID Number.");
+                number.focus();
+                return false;
+            }
+
+
+
+            if (email.value == "")								 
+            {
+                window.alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+
+            if (email.value.indexOf("@", 0) < 0)			 
+            {
+                window.alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+
+            if (email.value.indexOf(".", 0) < 0)			 
+            {
+                window.alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+            
+            
+            if (branch.value == "")							 
+            {
+                window.alert("Please enter your Branch.");
+                branch.focus();
+                return false;
+            }
+
+            if (phone.value == "")						 
+            {
+                window.alert("Please enter your mobile  number.");
+                phone.focus();
+                return false;
+            }
+            
+             if (amount.value == "")						 
+            {
+                window.alert("Please enter the Amount.");
+                amount.focus();
+                return false;
+            }
+
+
+            if (password.value == "")					 
+            {
+                window.alert("Please enter your Password");
+                password.focus();
+                return false;
+            }
+            
+            if (hobby.value == "")					 
+            {
+                window.alert("Please enter your Hobbies");
+                hobby.focus();
+                return false;
+            }
+            
+            
+             if (file.value == "")					 
+            {
+                window.alert("Please Upload your pic less than 40 KB");
+                file.focus();
+                return false;
+            }
+            
+            if (checked.value == "")					 
+            {
+                window.alert("Please tick the box to Proceed");
+                checked.focus();
+                return false;
+            }
+
+            
+
+//            if (what.selectedIndex < 1)				 
+//            {
+//                alert("Please enter your course.");
+//                what.focus();
+//                return false;
+//            }
+
+            return true;
+          }
+      </script>
+     
+     
+
+  </head>
+  <body data-spy="scroll" data-target="#mynavBar">
+     <!--Add video to the body element-->
+      <video autoplay loop muted id="bgvideo">
+<!--          <source src="images/nature%20video.mp4" type="video/mp4">-->
+          <source src="images/nature3%20video.mp4" type="video/mp4">
+<!--          <source src="images/nature2%20video.mp4" type="video/mp4">-->
+      </video>
+      
+       <!--Create navigation bar with scrollspy-->
+<!--
+      <nav role="navigation" class="navbar navbar-custom navbar-fixed-top" id="mynavBar">
+        
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <a class="navbar-brand">Registration Form</a>
+                  <button type="button" class="navbar-toggle" data-target="#navbarCollapse" data-toggle="collapse">
+                      <span class="sr-only">Toggle navigation</span>      
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  
+                  </button>
+              </div>
+              <div class="navbar-collapse collapse" id="navbarCollapse">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li class="active"><a href="#home">Home</a></li>
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#promise">Our Promise</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+-->
+      
+      <!--Create the home section with title, goal and joins us button-->
+    <div class="jumbotron" id="home">
+          <div class="container">
+              <h1>Register your self</h1>
+
+          </div>
+          
+    </div>
+    
+    <div class="section">
+     
+       <div class="input">
+    
+    
+             <div class="row" id="hdlog">
+                         
+                          <div id="dev" class="col-md-4">
+                              <img id="tlogo" src="images/techprologo.jpg" alt="Techpro Logo" width="100px" height="60px" align="left">
+                              
+                          </div>
+                          
+                          <div class="col-md-4">
+                              <h1 id="head">TechPro</h1>
+
+                          </div>
+                          
+                          <div class="col-md-4">
+                             <img id="qlogo" src="images/qlogo.png" alt="Techpro Logo" width="100px" height="60px" align="right">
+                              
+                          </div>
+                          
+            </div>
+            
+<!--
+            
+             <img id="tlogo" src="images/techprologo.jpg" alt="Techpro Logo" width="100px" height="60px" align="left">
+             
+             <img id="qlogo" src="images/quantumlogo.jpg" alt="Techpro Logo" width="100px" height="60px" align="right">
+              <h1 id="head">TechPro</h1>
+-->
+
+       
+     
+     
+
+<!--     action="/cgi-bin/test.cgi"-->
+      
+      
+       
+        <form class="form-horizontal" name="RegForm" method="post" action="/submit.php" onsubmit="return(validateForm());" >
+         
+          
+           <div class="form-group">
+            <label for="Name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="Name" name="Name" placeholder="Aryan Singh">
+            </div>
+          </div>
+          
+          
+           <div class="form-group">
+            <label for="digit" class="col-sm-2 control-label">QId/UR.No</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="digit" name="Number" placeholder="180205674">
+            </div>
+          </div>
+           
+           <div class="form-group">
+            <label for="EMail" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-5">
+              <input type="email" class="form-control" id="email" name="EMail" placeholder="aryan463@gmail.com">
+            </div>
+          </div>
+          
+          
+           <div class="form-group">
+            <label for="inputName" class="col-sm-2 control-label">Branch/Year</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputName" name="Branch" placeholder="CSE,ME,MTE,CE,PE/BTech,Diploma">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="digit" class="col-sm-2 control-label">MobileNo.</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="digit" name="Telephone" placeholder="9678566743">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="digit" class="col-sm-2 control-label">Amount</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="digit" name="Amount"  placeholder="Put Rs 50">
+            </div>
+          </div>
+           
+          
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-5">
+              <input type="password" class="form-control" id="inputPassword3" name="Password" placeholder="Password">
+            </div>
+          </div>
+          
+          
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">Hobbies</label>
+            <div class="col-sm-5">
+            <textarea name="comments" maxlength="500" class="form-control"  placeholder="Mention your hobbies."></textarea>
+          
+            </div>
+          </div>
+          
+          
+<!--          <input type="submit" value="Submit">-->
+          
+        <diiv id="file">
+              <div class="form-group">
+                <label for="exampleInputFile">File input</label><br>
+                 <div class="col-sm-">
+                <input type="file" name="File" id="exampleInputFile">
+                <p class="help-block" style="color:floralwhite">Upload your Pic less than 40 KB.</p>
+                 </div>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input name="Checks" type="checkbox"> Check me out
+                </label>
+              </div>
+              <input type="submit" value="Submit">
+
+<!--              <a href=""  type="submit" class="btn btn-primary btn-lg active" name="Submit"  role="button">Submit</a>-->
+        </diiv>
+          
+          
+          
+        </form>
+        
+      </div>
+         
+         
+         
+         
+     </div>
+     
+     
+     
+     
+     
+     
+   
+    
+      
+      <!--Create about section showing course details using grid system-->
+     
+      <!--Create Carousel-->
+     
+      <!--Add a footer for our website-->
+        
+        
+        
+         <div class="footer">
+               <div class="content">
+                      <div class="row">
+                          <div id="dev" class="col-md-4">
+                              <h3>Web Site Developed By</h3>
+                              <h4 id="descrip">Azhar Ali <br> From BTech CSE Third Year <br>Quantum School of Technology</h4>
+                          </div>
+                          <div class="col-md-3">
+                              <img src="images/azhar1.jpg" width="140px" height="160px">
+
+                          </div>
+                          <div class="col-md-5">
+                              <h3 id="media">Connect with me through Social Medias</h3>
+                              <div class="social-buttons">
+                                        <a href="https://www.facebook.com/azharali303" class="btn btn-fb"><i class="fab fa-facebook-square"></i> Facebook</a>
+                                        <a href="https://twitter.com/azharali303" class="btn btn-tw "><i class="fab fa-twitter"></i>Twitter</a>
+                                    </div>
+
+                                    <div class="social-buttons">
+                                        <a href="https://www.quora.com/profile/Azhar-Ali-96" class="btn btn-quora"><i class="fab fa-quora"></i>Quora</a>
+                                        <a href="https://www.linkedin.com/in/azhar-ali303/" class="btn btn-linkedin "><i class="fab fa-linkedin"></i>LinkedIn</a>
+                                    </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              
+              
+            
+   
+      
+      
+      
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+      <script>
+          $(function(){
+                $('.carousel').carousel({
+                    interval: 10000
+                }); 
+          });
+      </script>
+  </body>
+</html>
